@@ -5,6 +5,8 @@ from enum import Enum
 import time
 import os
 
+import generate_pickle
+
 OUT_PATH = 'output/'
 
 if not os.path.exists(OUT_PATH):
@@ -276,6 +278,8 @@ class Slave:
 
 
 if __name__ == '__main__':
+    generate_pickle.generate_data()
+
     n_slaves = 10
     pending_file_list = [f'input/file_{i}.txt' for i in range(n_slaves)]
     slave_id_list = [f'Slave{i}' for i in range(3)]
