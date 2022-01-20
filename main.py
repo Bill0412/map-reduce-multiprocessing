@@ -21,7 +21,7 @@ class Master:
         self.words_dict = words_dict
         self.slave_id_list = slave_id_list
         self.slave_queues = slave_queues
-        self.master_queue = master_queue # {"slave_id": "id", "phase": "map" or "reduce"}
+        self.master_queue = master_queue # {"slave_id": "id", "phase": "start", "map" or "reduce"}
 
         self.slave_pool = list()
 
